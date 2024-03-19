@@ -1,6 +1,7 @@
 package com.crm.pages;
 
 
+import com.crm.utilities.ConfigurationReader;
 import com.crm.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,21 +13,31 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="")
-    public WebElement userName;
+    @FindBy(name="USER_LOGIN")
+    public WebElement usernameInputBox;
 
-    @FindBy(id="")
-    public WebElement password;
+    @FindBy(name="USER_PASSWORD")
+    public WebElement passwordInputBox;
 
-    @FindBy(name = "")
-    public WebElement submit;
+    @FindBy(className = "login-btn")
+    public WebElement loginButton;
 
 
     public void login(String userNameStr, String passwordStr) {
-        userName.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
-        submit.click();
+        usernameInputBox.sendKeys(userNameStr);
+        passwordInputBox.sendKeys(passwordStr);
+        loginButton.click();
         // verification that we logged
+    }
+
+    public void login(String userType){
+
+        userType = userType.toLowerCase().replace(" ", "");
+
+        String username = ConfigurationReader.getProperty(userType+ "_username");
+        String password = ConfigurationReader.getProperty("password");
+
+        login(username, password);
     }
 
 }
