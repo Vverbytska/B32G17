@@ -19,7 +19,7 @@ Feature: Default
 	Scenario: US181_AC1_TC1_Verify that the user can send a message to all employees
 		Given user is on Home page
 		When user clicks on MESSAGE button
-		And user types message content "text"
+		And user types message content
 		And All employees are selected
 		Then user clicks on SEND button
 		And sent message is displayed on Activity Stream	
@@ -37,9 +37,9 @@ Feature: Default
 	Scenario: US181_AC1_TC2_Verify that the user can send a message to selected employee
 		Given user is on Home page
 		When user clicks on MESSAGE button
-		And user types message content "text"
+		And user types message content
 		Then user delete All employees option
-		And user add recipient "hr76@cydeo.com"
+		And user add recipient "marketing1"
 		Then user clicks on SEND button
 		And sent message is displayed on Activity Stream	
 
@@ -73,7 +73,7 @@ Feature: Default
 	Scenario: US181_AC1_TC4_Verify that "Please specify at least one person." error message is displayed 
 		Given user is on Home page
 		When user clicks on MESSAGE button
-		And user types message content "text"
+		And user types message content
 		And user deselects All employees
 		And user clicks on SEND button
 		Then "Please specify at least one person." error message is displayed	
@@ -109,7 +109,7 @@ Feature: Default
 	Scenario: US181_AC3_TC2_Verify that the user can cancel message after typing content.
 		Given user is on Home page
 		When user clicks on MESSAGE button
-		And user types message content "text"
+		And user types message content
 		Then user should be able to click on CANCEL button
 
 	#*US:*
@@ -121,7 +121,7 @@ Feature: Default
 	Scenario: US181_AC3_TC3_Verify that the user can cancel message after typing content and changing recipient.
 		Given user is on Home page
 		When user clicks on MESSAGE button
-		And user types message content "text"
+		And user types message content
 		Then user delete All employees option
 		And user add recipient "hr76@cydeo.com"
 		Then user should be able to click on CANCEL button
