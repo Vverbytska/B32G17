@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class MessagePage {
 
     public MessagePage() {
@@ -28,5 +30,32 @@ public class MessagePage {
 
     @FindBy(id = "blog-submit-button-cancel")
     public WebElement cancelButton;
+
+    @FindBy(css = "span#bx-b-uploadfile-blogPostForm")
+    public WebElement uploadFilesIcon;
+
+    @FindBy(xpath = "(//input[@type='file'])[1]")
+    public WebElement uploadFilesAndImagesBox;
+
+    @FindBy(css = ".files-name")
+    public WebElement fileAsAttachment;
+
+    @FindBy(xpath = "//span[contains(@id, 'check-in-text')]")
+    public WebElement insertInTextButton;
+
+    @FindBy(css = ".files-del-btn")
+    public WebElement xButton;
+
+    @FindBy(xpath = "//*[contains(@id, 'bxid')]")
+    public WebElement fileInText;
+
+    @FindBy(xpath = "//span[contains(@id, 'check-in-text')]")
+    public List<WebElement> insertInTextButtons;
+
+
+    @FindBy(xpath = "//*[contains(@id, 'bxid')]")
+    public List<WebElement> filesInText;
+
+
 
 }
