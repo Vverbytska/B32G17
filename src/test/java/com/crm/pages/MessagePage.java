@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MessagePage {
+public class MessagePage  extends HomePage{
 
     public MessagePage() {
         PageFactory.initElements(Driver.getDriver(),this);
