@@ -37,9 +37,9 @@ Feature: Default
 	Scenario: US181_AC1_TC2_Verify that the user can send a message to selected employee
 		Given user is on Home page
 		When user clicks on MESSAGE button
-		And user types message content
-		Then user deselects All employees option
-		And user add recipient "marketing1"
+		And user types message content "text"
+		Then user delete All employees option
+		And user add recipient "hr76@cydeo.com"
 		Then user clicks on SEND button
 		And sent message is displayed on Activity Stream	
 
