@@ -31,6 +31,15 @@ public class MessagePage  extends HomePage{
     @FindBy(id = "blog-submit-button-cancel")
     public WebElement cancelButton;
 
+    @FindBy(className = "feed-add-post-del-but")
+    public WebElement deleteRecipient;
+
+    @FindBy(id = "feed-add-post-destination-input")
+    public WebElement recipientsInputBox;
+
+
+
+
     @FindBy(css = "span#bx-b-uploadfile-blogPostForm")
     public WebElement uploadFilesIcon;
 

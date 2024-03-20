@@ -4,10 +4,15 @@ import com.crm.pages.HomePage;
 import com.crm.pages.MessagePage;
 import com.crm.utilities.BrowserUtils;
 import com.crm.utilities.Driver;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -15,7 +20,8 @@ import java.time.format.DateTimeFormatter;
 public class B32G17_181_sendMessageStepDefinition {
 
     MessagePage messagePage = new MessagePage();
-
+    Faker faker;
+    String messageText;
 
     @Given("user is on Home page")
     public void user_is_on_home_page() {
@@ -27,11 +33,12 @@ public class B32G17_181_sendMessageStepDefinition {
         messagePage.messageButton.click();
     }
 
-    @When("user types message content {string}")
-    public void user_types_message_content(String text) {
-
+    @When("user types message content")
+    public void user_types_message_content() {
+        faker = new Faker();
+        messageText = faker.harryPotter().spell();
         Driver.getDriver().switchTo().frame(messagePage.messageIframe);
-        messagePage.textInputBox.sendKeys(text);
+        messagePage.textInputBox.sendKeys(messageText);
         Driver.getDriver().switchTo().defaultContent();
     }
 
@@ -56,29 +63,27 @@ public class B32G17_181_sendMessageStepDefinition {
         LocalTime currentTime = LocalTime.now();
         DateTimeFormatter df = DateTimeFormatter.ofPattern("hh:mm a");
         String currentTimeString = currentTime.format(df).toLowerCase();
-        System.out.println("currentTimeString = " + currentTimeString);
 
         String postTime = messagePage.newStreamPostTime.getText();
-        postTime = postTime.substring(postTime.indexOf(" "));
-        System.out.println("postTime = " + postTime);
-
-        Assert.assertEquals(currentTimeString,postTime);
+        postTime = postTime.substring(postTime.indexOf(" ") + 1);
 
 
+        Assert.assertEquals(currentTimeString, postTime);
+        Assert.assertEquals(messageText, messagePage.newStreamPostText.getText());
 
 
     }
 
     @Then("user delete All employees option")
     public void user_delete_all_employees_option() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        messagePage.deleteRecipient.click();
     }
 
     @Then("user add recipient {string}")
-    public void user_add_recipient(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_add_recipient(String recipient) {
+        messagePage.addMoreRecipients.click();
+        messagePage.recipientsInputBox.sendKeys(recipient + Keys.ENTER);
+
     }
 
     @Then("{string} error message is displayed")
