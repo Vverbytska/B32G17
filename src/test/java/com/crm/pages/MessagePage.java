@@ -52,7 +52,7 @@ public class MessagePage  extends HomePage{
     @FindBy(css = ".files-name")
     public WebElement fileAsAttachment;
 
-    @FindBy(xpath = "//span[contains(@id, 'check-in-text')]")
+    @FindBy(css = ".insert-btn")
     public WebElement insertInTextButton;
 
     @FindBy(css = ".files-del-btn")
