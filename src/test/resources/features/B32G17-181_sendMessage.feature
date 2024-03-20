@@ -38,7 +38,7 @@ Feature: Default
 		Given user is on Home page
 		When user clicks on MESSAGE button
 		And user types message content
-		Then user delete All employees option
+		Then user deselects All employees option
 		And user add recipient "marketing1"
 		Then user clicks on SEND button
 		And sent message is displayed on Activity Stream	
@@ -74,7 +74,7 @@ Feature: Default
 		Given user is on Home page
 		When user clicks on MESSAGE button
 		And user types message content
-		And user deselects All employees
+		And user deselects All employees option
 		And user clicks on SEND button
 		Then "Please specify at least one person." error message is displayed	
 
@@ -122,6 +122,6 @@ Feature: Default
 		Given user is on Home page
 		When user clicks on MESSAGE button
 		And user types message content
-		Then user delete All employees option
+		Then user deselects All employees option
 		And user add recipient "hr76@cydeo.com"
 		Then user should be able to click on CANCEL button

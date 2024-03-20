@@ -74,8 +74,8 @@ public class B32G17_181_sendMessageStepDefinition {
 
     }
 
-    @Then("user delete All employees option")
-    public void user_delete_all_employees_option() {
+    @Then("user deselects All employees option")
+    public void user_deselects_all_employees_option() {
         messagePage.deleteRecipient.click();
     }
 
@@ -87,21 +87,14 @@ public class B32G17_181_sendMessageStepDefinition {
     }
 
     @Then("{string} error message is displayed")
-    public void error_message_is_displayed(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @When("user deselects All employees")
-    public void user_deselects_all_employees() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void error_message_is_displayed(String expectedErrorMessage) {
+        Assert.assertEquals
+                (expectedErrorMessage,messagePage.noTitleErrorMessage.getText());
     }
 
     @Then("user should be able to click on CANCEL button")
     public void user_should_be_able_to_click_on_cancel_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assert.assertTrue(messagePage.cancelButton.isEnabled());
     }
 
 

@@ -37,6 +37,9 @@ public class MessagePage  extends HomePage{
     @FindBy(id = "feed-add-post-destination-input")
     public WebElement recipientsInputBox;
 
+    @FindBy(className = "feed-add-info-text")
+    public WebElement noTitleErrorMessage;
+
 
 
 
