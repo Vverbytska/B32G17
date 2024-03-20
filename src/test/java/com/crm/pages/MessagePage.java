@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class MessagePage {
 
     public MessagePage() {
@@ -46,6 +48,14 @@ public class MessagePage {
 
     @FindBy(xpath = "//*[contains(@id, 'bxid')]")
     public WebElement fileInText;
+
+    @FindBy(xpath = "//span[contains(@id, 'check-in-text')]")
+    public List<WebElement> insertInTextButtons;
+
+
+    @FindBy(xpath = "//*[contains(@id, 'bxid')]")
+    public List<WebElement> filesInText;
+
 
 
 }
