@@ -13,8 +13,12 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
@@ -47,6 +51,8 @@ public class B32G17_181_sendMessageStepDefinition {
     public void all_employees_are_selected() {
 
         String expectedRecipient = "All employees";
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(2));
+        wait.until(ExpectedConditions.visibilityOf(messagePage.toRecipient));
         Assert.assertEquals(expectedRecipient, messagePage.toRecipient.getText());
 
     }
