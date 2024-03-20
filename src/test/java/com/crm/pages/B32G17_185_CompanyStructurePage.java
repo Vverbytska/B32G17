@@ -7,6 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 public class B32G17_185_CompanyStructurePage extends LoginPage {
 
+    public B32G17_185_CompanyStructurePage() {
+        PageFactory.initElements(Driver.getDriver(),this);
+
+    }
 
     @FindBy(xpath= "(//span[@class='menu-item-link-text'])[10]")
     public WebElement EmployeesButton;
