@@ -17,5 +17,8 @@ public abstract class HomePage {
     @FindBy(id = "feed-add-post-form-tab-message")
     public WebElement messageButton;
 
+    @FindBy(css = ".feed-time")
+    public WebElement newStreamPostTime;
+
 
 }

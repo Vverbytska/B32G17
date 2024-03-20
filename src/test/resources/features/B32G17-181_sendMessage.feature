@@ -1,6 +1,11 @@
 @B32G17-204
 Feature: Default
 
+	Background: Login by user type
+		Given user is on the login page
+		When user enters the "helpdesk" information
+		Then user should be able to login
+
 	#*US:*
 	#As a user, I should be able to send messages by clicking on Message tab in the Activity Stream
 	#
@@ -93,7 +98,7 @@ Feature: Default
 	Scenario: US181_AC3_TC1_Verify that the user can cancel message before typing content.
 		Given user is on Home page
 		When user clicks on MESSAGE button
-		Then user shoud be able to click on CANCEL button	
+		Then user should be able to click on CANCEL button
 
 	#*US:*
 	#As a user, I should be able to send messages by clicking on Message tab in the Activity Stream
@@ -105,7 +110,7 @@ Feature: Default
 		Given user is on Home page
 		When user clicks on MESSAGE button
 		And user types message content "text"
-		Then user shoud be able to click on CANCEL button	
+		Then user should be able to click on CANCEL button
 
 	#*US:*
 	#As a user, I should be able to send messages by clicking on Message tab in the Activity Stream
@@ -119,4 +124,4 @@ Feature: Default
 		And user types message content "text"
 		Then user delete All employees option
 		And user add recipient "hr76@cydeo.com"
-		Then user shoud be able to click on CANCEL button
+		Then user should be able to click on CANCEL button
