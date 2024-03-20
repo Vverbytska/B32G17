@@ -1,26 +1,29 @@
-@B32G17-195
-Feature: Default
 
-	
-	@B32G17-192
-	Scenario: Company Structure is visible for all user types
-		Given I am logged in as a "<all user >" user
-		When I navigate to the Company Structure page
-		Then I should be able to see the Company Structure	
+Background:
+Given the user is logged into the system
+TC1
+Scenario: Verify that the Company Structure is visible for all user types
+When the user navigates to the Employee menu
+Then the Company Structure option should be visible
 
-	
-	@B32G17-193
-	Scenario: HR user can add a department from the Company Structure
-		Given I am logged in as an "HR" user
-		    When I navigate to the Company Structure page
-		    And I click on the "Add Department" button
-		    And I enter department details
-		    And I save the department
-		    Then I should see the newly added department in the Company Structure	
+TC 2
+Given that user is already on the homepage
+When user clicks the "Employee Module"
+Then user should be able to see "Company Structure" as default.
 
-	
-	@B32G17-194
-	Scenario:  The “AD DEPARTMENT” button is not displayed for Helpdesk and Marketing users.
-		Given I am logged in as a "<hr>" user
-		    When I navigate to the Company Structure page
-		    Then I should  see the 'ADD DEPARTMENT' button
+Examples:
+
+|useType|
+|Human resource|
+|Helpdesk|
+|Marketing|
+Tc3
+Scenario Outline: Verify that the “ADD DEPARTMENT” button is not displayed for Helpdesk and Marketing users
+Given the user type is "<UserType>"
+And the user is on the Company Structure page
+Then the "ADD DEPARTMENT" button should not be displayed
+
+Examples:
+| UserType   |
+| Helpdesk   |
+| Marketing  |
