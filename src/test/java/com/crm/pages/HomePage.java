@@ -23,5 +23,11 @@ public abstract class HomePage {
     @FindBy(css = ".feed-post-text-block-inner-inner")
     public WebElement newStreamPostText;
 
+    @FindBy(id = "feed-add-post-form-link-more")
+    public WebElement moreDropdownButton;
+
+    @FindBy(css = "//span[.='Appreciation']")
+    public WebElement appreciationButton;
+
 
 }

@@ -9,7 +9,7 @@ Feature: File upload from Appreciation page
     And user clicks on Upload files and images button
     Then user chooses "<file>" to upload
     Then user should see file "<name>" under Attached files
-      Examples:
+    Examples:
       | file                                                                      | name                         |
       | C:\Users\volodka\Desktop\cydeo\jira.png                                   | jira                         |
       | C:\Users\volodka\Desktop\cydeo\textFile.txt                               | textFile                     |
@@ -46,15 +46,21 @@ Feature: File upload from Appreciation page
       | C:\Users\volodka\Desktop\cydeo\JAVA\Java_Interview_Questions_ALL.docx     | Java_Interview_Questions_ALL |
 
   @B32G17-231
-  Scenario: Verify user can insert the files and images into the text
+  Scenario Outline: Verify user can insert the files and images into the text
     Given user is on Appreciation page
     And user clicks on Upload files button
     And user clicks on Upload files and images button
-    Then user chooses all files to upload
-      | file | C:\Users\volodka\Desktop\cydeo\jira.png | C:\Users\volodka\Desktop\cydeo\textFile.txt | C:\Users\volodka\Desktop\cydeo\S2\G17_Sprint_2.pdf | C:\Users\volodka\Desktop\cydeo\Automation\HTML\HTML Class\cybertruck.jpeg | C:\Users\volodka\Desktop\cydeo\JAVA\Java_Interview_Questions_ALL.docx |
+    Then user chooses "<file>" to upload
     And user clicks on Insert in text buttons
     Then user should see text inside the button changed to In text
     Then user should see files inside the text box
+    Examples:
+      | file                                                                      |
+      | C:\Users\volodka\Desktop\cydeo\jira.png                                   |
+      | C:\Users\volodka\Desktop\cydeo\textFile.txt                               |
+      | C:\Users\volodka\Desktop\cydeo\S2\G17_Sprint_2.pdf                        |
+      | C:\Users\volodka\Desktop\cydeo\Automation\HTML\HTML Class\cybertruck.jpeg |
+      | C:\Users\volodka\Desktop\cydeo\JAVA\Java_Interview_Questions_ALL.docx     |
 
 
   @B32G17-232
