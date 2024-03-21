@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/crm/step_definitions",
         dryRun = false,
-        tags = "@B32G17-214 and not @ignore",
+        tags = "@B32G17-228",
         publish = true
 )
 public class CukesRunner {}
