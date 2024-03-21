@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 
 public class B32G17_185CompanyStructureStep {
     B32G17_185CompanyStructureStep b32G17_185CompanyStructureStep = new B32G17_185CompanyStructureStep();
@@ -21,6 +22,10 @@ public class B32G17_185CompanyStructureStep {
     public void userEntersTheInformation(String arg0) {
         String expectedTile = "https://qa.azulcrm.com/company/vis_structure.php";
         BrowserUtils.verifyTitle(expectedTile);
+        WebElement allUsers= theUserTypeIs("marketing, helpDesk"));
+
+
+
 
     }
     @When("the user navigates to the Employees menu")
@@ -32,6 +37,7 @@ public class B32G17_185CompanyStructureStep {
     public void theCompanyStructureOptionShouldBeVisible() {
         BrowserUtils.verifyTitle(" Company Structure ");
     }
+
 
     @Given("that user is already on the homepage")
     public void thatUserIsAlreadyOnTheHomepage() {
