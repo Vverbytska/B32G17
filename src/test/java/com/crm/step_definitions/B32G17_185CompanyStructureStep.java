@@ -6,6 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class B32G17_185CompanyStructureStep {
+    B32G17_185CompanyStructureStep b32G17_185CompanyStructureStep= new B32G17_185CompanyStructureStep()
+
     @Given("user is on the login page")
     public void userIsOnTheLoginPage() {
     }
