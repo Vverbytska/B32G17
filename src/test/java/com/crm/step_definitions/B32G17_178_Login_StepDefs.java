@@ -17,10 +17,6 @@ public class B32G17_178_Login_StepDefs {
     LoginTestPage loginTestPage = new LoginTestPage();
     Scenario scenario;
 
-    @Given("user is on the login page")
-    public void user_is_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    }
     @When("the user login with HR user {string},{string}")
     public void the_user_login_with_hr_user(String user, String psd) {
         loginTestPage.login(user, psd);
@@ -76,10 +72,7 @@ public class B32G17_178_Login_StepDefs {
     }
     @Then("user should see the password hidden as bullet signs")
     public void user_should_see_the_password_hidden_as_bullet_signs() {
-        byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-        scenario.attach(screenshot, "image/png", scenario.getName());
-
-        Assert.assertTrue(loginTestPage.passwordInputBox.getText().isBlank());
+        Assert.assertEquals("password", loginTestPage.passwordInputBox.getAttribute("type"));
     }
 
 }

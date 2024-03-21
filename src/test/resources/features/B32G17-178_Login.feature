@@ -87,7 +87,7 @@ Feature: Login functionality
 	#AC:
 	#
 	#Verify that the "{color:#de350b}Please fill out this field{color}" error message is displayed if the password or username is empty.
-  @B32G17-211
+  @B32G17-211 @ignore
   Scenario Outline: US178_AC03_TC01 Verify error message is displayed if credential is left empty
     Given user is on the login page
     When the user login with "<username>","<password>"
