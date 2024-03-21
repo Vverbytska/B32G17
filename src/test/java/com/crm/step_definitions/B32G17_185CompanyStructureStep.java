@@ -17,15 +17,10 @@ public class B32G17_185CompanyStructureStep {
         Driver.getDriver().get(ConfigurationReader.getProperty("all users types"));
     }
 
-
     @When("user enters the {string} information")
     public void userEntersTheInformation(String arg0) {
         String expectedTile = "https://qa.azulcrm.com/company/vis_structure.php";
         BrowserUtils.verifyTitle(expectedTile);
-        WebElement allUsers= theUserTypeIs("marketing, helpDesk"));
-
-
-
 
     }
     @When("the user navigates to the Employees menu")
@@ -41,6 +36,7 @@ public class B32G17_185CompanyStructureStep {
 
     @Given("that user is already on the homepage")
     public void thatUserIsAlreadyOnTheHomepage() {
+
     }
 
     @When("user clicks the {string}")
