@@ -22,10 +22,6 @@ public class B32G17_185CompanyStructureStep {
         BrowserUtils.verifyTitle(expectedTile);
 
     }
-
-
-
-
     @When("the user navigates to the Employees menu")
     public void theUserNavigatesToTheEmployeesMenu() {
         userClicksThe("Employees button");
@@ -42,6 +38,7 @@ public class B32G17_185CompanyStructureStep {
 
     @When("user clicks the {string}")
     public void userClicksThe(String arg0) {
+        userClicksThe("Employees");
     }
 
     @Then("user should be able to see {string} as default.")
@@ -54,10 +51,12 @@ public class B32G17_185CompanyStructureStep {
 
     @And("the user is on the Company Structure page")
     public void theUserIsOnTheCompanyStructurePage() {
+        BrowserUtils.verifyTitle(" Company Structure ");
     }
 
     @Then("the {string} button should not be displayed")
     public void theButtonShouldNotBeDisplayed(String arg0) {
+
     }
 
 
