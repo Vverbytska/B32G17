@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MessagePage {
+import java.util.List;
+
+public class MessagePage  extends HomePage{
 
     public MessagePage() {
         PageFactory.initElements(Driver.getDriver(),this);
@@ -28,5 +30,44 @@ public class MessagePage {
 
     @FindBy(id = "blog-submit-button-cancel")
     public WebElement cancelButton;
+
+    @FindBy(className = "feed-add-post-del-but")
+    public WebElement deleteRecipient;
+
+    @FindBy(id = "feed-add-post-destination-input")
+    public WebElement recipientsInputBox;
+
+    @FindBy(className = "feed-add-info-text")
+    public WebElement noTitleErrorMessage;
+
+
+
+
+    @FindBy(css = "span#bx-b-uploadfile-blogPostForm")
+    public WebElement uploadFilesIcon;
+
+    @FindBy(xpath = "(//input[@type='file'])[1]")
+    public WebElement uploadFilesAndImagesBox;
+
+    @FindBy(css = ".files-name")
+    public WebElement fileAsAttachment;
+
+    @FindBy(css = ".insert-btn")
+    public WebElement insertInTextButton;
+
+    @FindBy(css = ".files-del-btn")
+    public WebElement xButton;
+
+    @FindBy(xpath = "//*[contains(@id, 'bxid')]")
+    public WebElement fileInText;
+
+    @FindBy(xpath = "//span[contains(@id, 'check-in-text')]")
+    public List<WebElement> insertInTextButtons;
+
+
+    @FindBy(xpath = "//*[contains(@id, 'bxid')]")
+    public List<WebElement> filesInText;
+
+
 
 }
