@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class MessagePage  extends HomePage{
+public class MessagePage {
 
     public MessagePage() {
         PageFactory.initElements(Driver.getDriver(),this);
@@ -69,5 +69,5 @@ public class MessagePage  extends HomePage{
     public List<WebElement> filesInText;
 
 
-
 }
+//

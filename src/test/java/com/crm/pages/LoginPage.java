@@ -22,6 +22,9 @@ public class LoginPage {
     @FindBy(className = "login-btn")
     public WebElement loginButton;
 
+    @FindBy(id = "USER_REMEMBER")
+    public WebElement rememberMeBox;
+
 
     public void login(String userNameStr, String passwordStr) {
         usernameInputBox.sendKeys(userNameStr);
@@ -41,3 +44,4 @@ public class LoginPage {
     }
 
 }
+
