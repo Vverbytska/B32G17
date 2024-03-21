@@ -3,11 +3,11 @@ Background:
 Given the user is logged into the system
 
  Scenario Outline : Verify that the Company Structure is visible for all user types
-When the user navigates to the Employee menu
+When the user navigates to the Employees menu
 Then the Company Structure option should be visible
 
 Given that user is already on the homepage
-When user clicks the "Employee Module"
+When user clicks the "Employees Module"
 Then user should be able to see "Company Structure" as default.
 
 Examples:
