@@ -33,5 +33,13 @@ public abstract class HomePage {
     public WebElement companyButton;
 
 
+    @FindBy(id = "user-block")
+    public WebElement userIcon;
+
+    @FindBy(className = "menu-popup-item menu-popup-no-icon ")
+    public WebElement myProfileLink;
+
+
+
 
 }
