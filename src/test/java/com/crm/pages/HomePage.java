@@ -29,5 +29,9 @@ public abstract class HomePage {
     @FindBy(xpath = "//span[.='Appreciation']")
     public WebElement appreciationButton;
 
+    @FindBy(xpath = "//a[@title='Company']")
+    public WebElement companyButton;
+
+
 
 }
