@@ -3,10 +3,7 @@ Feature: As a user, I should be able to access to the Company page
 
   Background: Login by user type
     Given user is on the login page
-    When user enters the "username" information
-      | hr        |
-      | helpdesk  |
-      | marketing |
+    When user enters the "hr" information
     Then user should be able to login
 
 

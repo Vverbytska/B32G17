@@ -23,5 +23,8 @@ public abstract class HomePage {
     @FindBy(css = ".feed-post-text-block-inner-inner")
     public WebElement newStreamPostText;
 
+    @FindBy(xpath = "//a[@title='Company']")
+    public WebElement companyButton;
+
 
 }
