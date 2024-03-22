@@ -1,6 +1,5 @@
 package com.crm.step_definitions;
 
-import com.crm.pages.HomePage;
 import com.crm.utilities.BrowserUtils;
 import com.crm.utilities.ConfigurationReader;
 import com.crm.utilities.Driver;
@@ -8,12 +7,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import java.util.List;
-import java.util.Set;
+
 
 public class B32G17_185CompanyStructureStep  {
     B32G17_185CompanyStructureStep b32G17_185CompanyStructureStep = new B32G17_185CompanyStructureStep();
