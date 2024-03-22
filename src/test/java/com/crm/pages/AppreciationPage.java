@@ -17,9 +17,6 @@ public class AppreciationPage extends HomePage{
     @FindBy(id = "bx-b-uploadfile-blogPostForm")
     public WebElement uploadFileIcon;
 
-    @FindBy(className = "wd-fa-add-file-light-text")
-    public WebElement uploadFileField;
-
     @FindBy(className = "files-text")
     public List<WebElement> fileNames; // for multiple file upload
 
@@ -38,8 +35,6 @@ public class AppreciationPage extends HomePage{
     @FindBy(className = "del-but")
     public List<WebElement> allRemoveFileButtons; // for multiple file upload
 
-    @FindBy(xpath = "//body[@contenteditable='true']")
-    public WebElement textInputBox;
 
 
 

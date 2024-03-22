@@ -26,7 +26,7 @@ public abstract class HomePage {
     @FindBy(id = "feed-add-post-form-link-more")
     public WebElement moreDropdownButton;
 
-    @FindBy(css = "//span[.='Appreciation']")
+    @FindBy(xpath = "//span[.='Appreciation']")
     public WebElement appreciationButton;
 
 
