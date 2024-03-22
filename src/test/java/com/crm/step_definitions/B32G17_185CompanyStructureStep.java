@@ -11,12 +11,12 @@ import io.cucumber.java.en.When;
 
 
 public class B32G17_185CompanyStructureStep extends HomePage {
-    B32G17_185CompanyStructureStep b32G17_185CompanyStructureStep = new B32G17_185CompanyStructureStep();
+
 
 
     @Given("user is on the login page")
     public void userIsOnTheLoginPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("all users types"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("hr_username"));
 
     }
 

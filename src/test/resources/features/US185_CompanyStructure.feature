@@ -1,10 +1,11 @@
+@wip
 Feature: Login Feature
 Background:
  Given user is on the login page
  When user enters the "helpdesk" information
  Then user should be able to login
 
- Scenario Outline : Verify that the Company Structure is visible for all user types
+ Scenario Outline: Verify that the Company Structure is visible for all user types
 When the user navigates to the Employees menu
 Then the Company Structure option should be visible
 
