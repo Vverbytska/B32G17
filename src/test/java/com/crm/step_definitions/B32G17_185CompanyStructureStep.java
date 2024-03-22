@@ -1,5 +1,6 @@
 package com.crm.step_definitions;
 
+import com.crm.pages.HomePage;
 import com.crm.utilities.BrowserUtils;
 import com.crm.utilities.ConfigurationReader;
 import com.crm.utilities.Driver;
@@ -9,8 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-
-public class B32G17_185CompanyStructureStep  {
+public class B32G17_185CompanyStructureStep extends HomePage {
     B32G17_185CompanyStructureStep b32G17_185CompanyStructureStep = new B32G17_185CompanyStructureStep();
 
 
@@ -28,6 +28,7 @@ public class B32G17_185CompanyStructureStep  {
     }
     @When("the user navigates to the Employees menu")
     public void theUserNavigatesToTheEmployeesMenu() {
+
         userClicksThe("Employees button");
     }
 
@@ -45,6 +46,7 @@ public class B32G17_185CompanyStructureStep  {
     @When("user clicks the {string}")
     public void userClicksThe(String arg0) {
         userClicksThe("Employees");
+
     }
 
     @Then("user should be able to see {string} as default.")
@@ -62,6 +64,8 @@ public class B32G17_185CompanyStructureStep  {
 
     @Then("the {string} button should not be displayed")
     public void theButtonShouldNotBeDisplayed(String arg0) {
+
+
 
     }
 

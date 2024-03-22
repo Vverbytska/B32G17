@@ -1,6 +1,8 @@
-Feature: Login functionality
+Feature: Login Feature
 Background:
-Given the user is logged into the system
+ Given user is on the login page
+ When user enters the "helpdesk" information
+ Then user should be able to login
 
  Scenario Outline : Verify that the Company Structure is visible for all user types
 When the user navigates to the Employees menu
@@ -11,7 +13,6 @@ When user clicks the 'Employees'
 Then user should be able to see "Company Structure" as default.
 
 Examples:
-
 |useType|
 |Human resource|
 |Helpdesk|
