@@ -25,3 +25,8 @@ When user is at login page
     |Birthdays|
     |New page|
 
+
+
+    Scenario: User sees Company Structure  by default
+     When User has already clicked on employee module
+      Then user is able to see the company structure sign
