@@ -1,10 +1,12 @@
-@b32G17-237
+@B32G17-237
 Feature: As a user, I should be able to add link in message
 
   Background: Login
     Given user is on the login page
     When user enters the "hr" information
     Then user should be able to login
+
+  @B32G17-236
   Scenario:
     #Given user is already homepage
     And User hits the message tab
