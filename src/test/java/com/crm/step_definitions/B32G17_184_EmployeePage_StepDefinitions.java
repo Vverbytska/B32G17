@@ -16,7 +16,7 @@ public class B32G17_184_EmployeePage_StepDefinitions {
 
     @When("user is at login page")
     public void user_is_at_login_page() {
-        Driver.getDriver().get("qa.azulcrm.com/");
+        Driver.getDriver().get("https://qa.azulcrm.com/");
     }
 
     LoginPage loginPage  = new LoginPage();
@@ -43,10 +43,11 @@ loginPage.loginButton.click();
     @When("User clicks on the Employees Modules")
     public void user_clicks_on_the_employees_modules() {
 
-        emplyeeAccessPage.EmployeeModule.click();
+
     }
 
     @Then("User sees the following Modules:")
+
     public void user_sees_the_following_modules(List<WebElement> modules) {
 
 
@@ -58,12 +59,12 @@ loginPage.loginButton.click();
 
     @When("User has already clicked on employee module")
     public void user_has_already_clicked_on_employee_module() {
-
+        emplyeeAccessPage.EmployeeModule.click();
     }
     @Then("user is able to see the company structure sign")
     public void user_is_able_to_see_the_company_structure_sign() {
-       Assert.assertTrue(emplyeeAccessPage.companyStructure.isDisplayed());
 
+Assert.assertTrue(emplyeeAccessPage.companyStructure.isDisplayed());
     }
 
 

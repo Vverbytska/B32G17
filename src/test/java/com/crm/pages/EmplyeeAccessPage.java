@@ -15,7 +15,7 @@ public class EmplyeeAccessPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (css= "a[class='menu-item-link-text']")
+    @FindBy (id= "bx_left_menu_menu_company")
     public WebElement EmployeeModule;
 
 
