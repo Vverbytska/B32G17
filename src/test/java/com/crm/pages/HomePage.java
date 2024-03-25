@@ -36,7 +36,7 @@ public abstract class HomePage {
     @FindBy(id = "user-block")
     public WebElement userIcon;
 
-    @FindBy(className = "menu-popup-item menu-popup-no-icon ")
+    @FindBy(css = ".menu-popup-item.menu-popup-no-icon ")
     public WebElement myProfileLink;
 
 
