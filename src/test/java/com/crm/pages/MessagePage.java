@@ -70,4 +70,23 @@ public class MessagePage  extends HomePage{
 
 
 
+
+
+    @FindBy(css = "span[class='bxhtmled-top-bar-btn bxhtmled-button-link']")
+    public WebElement linkButton;
+
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
+    public WebElement linkTextBox;
+
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-href")
+    public WebElement linkURLBox;
+
+    @FindBy(id = "undefined")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//div[@id='workarea-content']/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/a")
+    public WebElement textLink;
+
+
+
 }
