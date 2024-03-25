@@ -69,5 +69,23 @@ public abstract class HomePage {
 
 
 
+    @FindBy(id = "feed-add-post-form-link-more")
+    public WebElement moreDropdownButton;
+
+    @FindBy(xpath = "//span[.='Appreciation']")
+    public WebElement appreciationButton;
+
+    @FindBy(xpath = "//a[@title='Company']")
+    public WebElement companyButton;
+
+
+    @FindBy(id = "user-block")
+    public WebElement userIcon;
+
+    @FindBy(css = ".menu-popup-item.menu-popup-no-icon ")
+    public WebElement myProfileLink;
+
+
+
 
 }

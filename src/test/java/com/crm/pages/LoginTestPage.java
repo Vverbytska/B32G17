@@ -1,15 +1,14 @@
 package com.crm.pages;
 
-
 import com.crm.utilities.ConfigurationReader;
 import com.crm.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginTestPage {
 
-    public LoginPage(){
+    public LoginTestPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -21,6 +20,9 @@ public class LoginPage {
 
     @FindBy(className = "login-btn")
     public WebElement loginButton;
+
+    @FindBy(className = "errortext")
+    public WebElement invalidErrorMsg;
 
     @FindBy(id = "USER_REMEMBER")
     public WebElement rememberMeBox;
@@ -42,5 +44,4 @@ public class LoginPage {
 
         login(username, password);
     }
-
 }
