@@ -14,6 +14,15 @@ public class DrivePage extends HomePage{
    @FindBy(xpath = "//a[@title='Drive']")
     public WebElement DrivePage;
 
+    @FindBy(xpath = "//a[@title='Drive']")
+ public WebElement driveButton;
+
+
+    //@FindBy(className = "main-buttons-item-drag-button")
+    //public List<WebElement> currentModules;
+
+    @FindBy(xpath = "//a[@class='main-buttons-item-link']")
+    public List<WebElement> driveModules;
 
 
 
