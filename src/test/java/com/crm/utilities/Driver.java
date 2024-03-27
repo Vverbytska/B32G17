@@ -1,5 +1,6 @@
 package com.crm.utilities;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -41,7 +42,7 @@ public class Driver {
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
-                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().window().setSize(new Dimension(1920, 1080));
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "firefox":
