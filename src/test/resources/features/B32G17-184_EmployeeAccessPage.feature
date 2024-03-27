@@ -13,8 +13,7 @@ When user is at login page
 
 
   Scenario: User can see the modules in the employee page verification.
- Given user is already logged in and landed on the home page
-  When User clicks on the Employees Modules
+    When User has already clicked on employee module
   Then User sees the following Modules:
     | Company Structure|
     |Find Employee|
